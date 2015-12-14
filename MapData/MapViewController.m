@@ -24,9 +24,11 @@
 // ボタン
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIButton *dataButton;
+@property (weak, nonatomic) IBOutlet UIButton *mapTypeButton;
 
 - (IBAction)addButtonAction:(id)sender;
 - (IBAction)dataButtonAction:(id)sender;
+- (IBAction)mapTypeButtonAction:(id)sender;
 
 @end
 
@@ -56,7 +58,9 @@
     self.mapView.delegate = self;
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     
-    self.mapView.mapType = MKMapTypeSatelliteFlyover;
+    // 初期の地図タイプを設定
+    [self.mapTypeButton setTitle:@"Flyover" forState:UIControlStateNormal];
+    self.mapView.mapType = MKMapTypeStandard;
 }
 
 // 位置情報が取得成功した場合にコールされる
@@ -256,9 +260,21 @@
     }
 }
 
+- (IBAction)mapTypeButtonAction:(id)sender {
+    if ([self.mapTypeButton.currentTitle isEqualToString:@"Flyover"]) {
+        [self.mapTypeButton setTitle:@"Standard" forState:UIControlStateNormal];
+        self.mapView.mapType = MKMapTypeSatelliteFlyover;
+    } else {
+        [self.mapTypeButton setTitle:@"Flyover" forState:UIControlStateNormal];
+        self.mapView.mapType = MKMapTypeStandard;
+    }
+}
+
 
 - (IBAction)exitFromDataView:(UIStoryboardSegue *)segue {
 }
+
+
 
 
 

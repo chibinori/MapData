@@ -65,23 +65,58 @@
                                     <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dlh-yL-dQD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWn-ef-Dym">
+                                <rect key="frame" x="95" y="550" width="68" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JaC-gw-9mZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Upa-Y8-5GD"/>
+                                    <constraint firstAttribute="width" constant="46" id="Zq5-Cj-pn2"/>
+                                    <constraint firstAttribute="width" constant="81" id="pGp-8r-w14"/>
+                                    <constraint firstAttribute="width" constant="68" id="vrk-IK-Wzs"/>
+                                </constraints>
+                                <state key="normal" title="Flyover">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JaC-gw-9mZ"/>
+                                        <exclude reference="Zq5-Cj-pn2"/>
+                                        <exclude reference="pGp-8r-w14"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="mapTypeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="plf-dI-iOK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nWn-ef-Dym" firstAttribute="leading" secondItem="LCF-vJ-KwY" secondAttribute="trailing" constant="29" id="35Y-XJ-hM1"/>
                             <constraint firstAttribute="trailing" secondItem="3aP-lX-5ie" secondAttribute="trailing" constant="20" id="Bad-jd-mUo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3aP-lX-5ie" secondAttribute="bottom" constant="20" id="ENc-h2-Njh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCF-vJ-KwY" secondAttribute="bottom" constant="20" id="Hy7-hc-LSy"/>
                             <constraint firstItem="FP9-Vk-8a4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MBU-di-HBE"/>
+                            <constraint firstAttribute="trailing" secondItem="nWn-ef-Dym" secondAttribute="trailing" constant="20" id="bxi-Fk-iCi"/>
                             <constraint firstItem="FP9-Vk-8a4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dKn-9X-jfL"/>
                             <constraint firstAttribute="trailing" secondItem="FP9-Vk-8a4" secondAttribute="trailing" id="dOQ-8Z-gEe"/>
+                            <constraint firstItem="nWn-ef-Dym" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="fl9-3f-R2G"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nWn-ef-Dym" secondAttribute="bottom" constant="20" id="i6j-iQ-lFY"/>
                             <constraint firstItem="LCF-vJ-KwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="n1x-XB-w0b"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FP9-Vk-8a4" secondAttribute="bottom" id="oRm-Qp-2fT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bxi-Fk-iCi"/>
+                                <exclude reference="fl9-3f-R2G"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="aRn-pF-J0m"/>
                     <connections>
                         <outlet property="addButton" destination="LCF-vJ-KwY" id="ldT-XJ-PBt"/>
                         <outlet property="dataButton" destination="3aP-lX-5ie" id="PTQ-ER-V1V"/>
+                        <outlet property="mapTypeButton" destination="nWn-ef-Dym" id="0Ft-uA-hGm"/>
                         <outlet property="mapView" destination="FP9-Vk-8a4" id="A7N-xX-dTi"/>
                         <segue destination="qMZ-eh-wZ7" kind="show" identifier="DataView" id="Ky0-xH-EEB"/>
                     </connections>
