@@ -55,6 +55,8 @@
     // 地図の機能を有効化
     self.mapView.delegate = self;
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
+    
+    self.mapView.mapType = MKMapTypeSatelliteFlyover;
 }
 
 // 位置情報が取得成功した場合にコールされる

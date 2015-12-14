@@ -43,6 +43,9 @@
     if (self.annotationArray == nil) {
         self.annotationArray = [NSMutableArray arrayWithCapacity:0];
     }
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
